@@ -1,16 +1,44 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+.floating-to-right {
+  animation-name: floating-right;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
-a {
-  color: blue;
-  text-decoration: none;
+@keyframes floating-right {
+  0% { transform: translate(-120vw, 0); }
+  100%   { transform: translate(120vw, 0); }
 }
 
-* {
-  box-sizing: border-box;
+.floating-to-left {
+  animation-name: floating-left;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes floating-left {
+  0% { transform: translate(130vw, 0); }
+  100%   { transform: translate(-130vw, 0); }
+}
+
+.offscreen-left {
+  transform: translate(-35vw, 0);
+}
+
+.offscreen-right {
+  transform: translate(35vw, 0);
+}
+
+.offscreen-left-from-right {
+  transform: translate(-135vw, 0);
+}
+
+.offscreen-right-from-left {
+  transform: translate(135vw, 0);
+}
+
+.offscreen-initial {
+  transform: translate(300vw, 0);;
 }
