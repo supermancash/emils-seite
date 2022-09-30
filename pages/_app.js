@@ -3,8 +3,11 @@ import {AppShell, MantineProvider} from "@mantine/core";
 import HeaderComponent from "../components/Header";
 import FooterComponent from "../components/Footer";
 import "animate.css";
+import {useViewportSize} from "@mantine/hooks";
 
 function MyApp({Component, pageProps}) {
+    const { height, width } = useViewportSize();
+    const isMobile=height>width;
 
     return (
         <>
@@ -20,7 +23,7 @@ function MyApp({Component, pageProps}) {
                     header={<HeaderComponent/>}
                     footer={<FooterComponent/>}
                 >
-                <Component {...pageProps} />
+                <Component {...pageProps} isMobile={isMobile} />
                 </AppShell>
             </MantineProvider>
         </>
