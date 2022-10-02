@@ -36,7 +36,7 @@ const HomePageComponent = (props) => {
                 el2.className = i % 2 === 0 ? "floating-to-left" : "floating-to-right";
             }, Math.random() * 10000)
         }
-    })
+    }, [])
 
     //TODO:_fix_cool_animation_phone_view
     return (
