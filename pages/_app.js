@@ -23,7 +23,7 @@ function MyApp({Component, pageProps}) {
                     header={<HeaderComponent/>}
                     footer={<FooterComponent/>}
                 >
-                <Component {...pageProps} isMobile={isMobile} />
+                <Component {...pageProps} isMobile={isMobile} userAgentHeight={height} userAgentWidth={width}/>
                 </AppShell>
             </MantineProvider>
         </>
