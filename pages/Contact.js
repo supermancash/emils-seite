@@ -16,7 +16,7 @@ import {IconBrandInstagram, IconBrandLinkedin, IconPhone} from "@tabler/icons";
 import Link from "next/link";
 import {useEffect} from "react";
 
-const contactPage = (props) => {
+const ContactPage = (props) => {
     const router = useRouter();
     const privateMode = router.query.private === 'true';
 
@@ -89,4 +89,4 @@ const contactPage = (props) => {
 
 }
 
-export default contactPage;
+export default ContactPage;
