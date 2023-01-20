@@ -1,7 +1,12 @@
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .floating-to-right {
   animation-name: floating-right;
-  animation-duration: 20s;
+  animation-duration: 30s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
@@ -13,7 +18,7 @@
 
 .floating-to-left {
   animation-name: floating-left;
-  animation-duration: 20s;
+  animation-duration: 30s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
@@ -23,12 +28,23 @@
   100%   { transform: translate(-130vw, 0); }
 }
 
+.offscreen-outer {
+  overflow: hidden;
+  position: relative;
+}
+
 .offscreen-left {
-  transform: translate(-35vw, 0);
+  position: absolute;
+  height: 10vh;
+  width: 10vw;
+  right: -50vw;
 }
 
 .offscreen-right {
-  transform: translate(35vw, 0);
+  position: absolute;
+  height: 10vh;
+  width: 10vw;
+  left: -50vw;
 }
 
 .offscreen-left-from-right {
