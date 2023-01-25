@@ -6,13 +6,20 @@ import {
     Title,
     Badge,
     Stack,
-    Container,
+    Button,
     SimpleGrid,
     Avatar,
-    Center
+    Center, Space
 } from "@mantine/core";
 import {useRouter} from "next/router";
-import {IconBrandInstagram, IconBrandLinkedin, IconPhone} from "@tabler/icons";
+import {
+    Icon3dCubeSphere,
+    IconBrandGithub,
+    IconBrandInstagram,
+    IconBrandLinkedin,
+    IconBrandPaypal, IconBrandSnapchat,
+    IconPhone
+} from "@tabler/icons";
 import Link from "next/link";
 import {useEffect} from "react";
 
@@ -41,46 +48,74 @@ const ContactPage = (props) => {
 
     return (
         <>
-            <br/>
-            <Paper shadow="xl" radius="xl">
+            <Paper shadow="xl" radius="xl" >
                 <BackgroundImage
                     src="star_background.jpg"
                     radius="xl"
                     p="md"
+                    style={{height: "85vh"}}
                 >
-
-                    <Stack align="stretch">
-                        <Center>
+                    <Stack align="center" spacing="lg">
                             <Avatar
                                 src="emil_portrait.jpeg"
                                 radius={0.1 * props.userAgentHeight}
                                 size={0.2 * props.userAgentHeight}
                                 style={{zIndex: "3"}}
                             />
-                        </Center>
-                        <Title color="white" align="center">Add me on:</Title>
-                        <Badge variant="gradient" gradient={{from: '#ffffff', to: '#ffffff'}} size="xl"
-                               onClick={phoneHandler}>
-                            <Group>
-                                <IconPhone color="black"/> <Text color="dark">Mobile</Text>
-                            </Group>
-                        </Badge>
-                        <Badge onClick={instagramHandler}
-                               variant="gradient" gradient={{from: 'red', to: 'orange'}}
-                               size="xl">
-                            <Group>
-                                <IconBrandInstagram/> <>Instagram</>
-                            </Group>
-                        </Badge>
-                        <Badge
+                        <Title color="white" >Add me on:</Title>
+
+
+                        <Button variant="gradient" gradient={{from: '#ffffff', to: '#ffffff'}} radius="xl"
+                                style={{width: "50vw"}}
+                                onClick={phoneHandler} leftIcon={<IconPhone style={{width:"10vw"}} color="black"/>}>
+                            <Text color="dark" style={{width:"25vw", padding: "5vw"}}>Mobile</Text>
+                        </Button>
+
+
+                        <Button onClick={instagramHandler} leftIcon={<IconBrandInstagram style={{width:"10vw"}}/>}
+                                variant="gradient" gradient={{from: 'purple', to: 'orange'}} style={{width: "50vw"}}
+                                radius="xl">
+                            <Text style={{width:"25vw", padding: "5vw"}}>Instagram</Text>
+                        </Button>
+
+                        <Button onClick={() => window.open("https://snapchat.com/add/emilderdritte", "_blank")}
+                                leftIcon={<IconBrandSnapchat color="black" style={{width:"10vw", fill: "white"}}/>}
+                                variant="gradient" gradient={{from: '#FFFC00', to: '#FFFC00'}} style={{width: "50vw"}}
+                                radius="xl">
+                            <Text style={{width:"25vw", padding: "5vw"}} color="dark">Snapchat</Text>
+                        </Button>
+
+                        <Button
                             onClick={() => window.open("https://www.linkedin.com/in/emil-triest-6521331a6/", "_blank")}
-                            variant="filled" color="blue"
-                            size="xl">
+                            variant="gradient" gradient={{from: "blue", to: "blue"}}
+                            radius="xl" style={{width: "50vw"}}
+                            leftIcon={<IconBrandLinkedin style={{width:"10vw"}}/>}>
+
+                            <Text style={{width:"25vw", padding: "5vw"}}>LinkedIn</Text>
+
+                        </Button>
+
+                        <Button
+                            onClick={() => window.open("https://bere.al/emoel", "_blank")}
+                            variant="gradient" gradient={{from: '#000000', to: '#000000'}}
+                            radius="xl" style={{width: "50vw"}}>
                             <Group>
-                                <IconBrandLinkedin/> <>LinkedIn</>
+                                <Text>BeReal.</Text>
                             </Group>
-                        </Badge>
+                        </Button>
+
+                        <Button
+                            onClick={() => window.open("https://paypal.me/EmilTriest", "_blank")}
+                            variant="gradient" gradient={{from: '#1E477A', to: '#1E477A'}}
+                            radius="xl" style={{width: "50vw"}}
+                            leftIcon={<IconBrandPaypal style={{width:"10vw"}}   />}>
+
+                            <Text style={{width:"25vw",padding: "5vw"}}>PayPal</Text>
+
+                        </Button>
+
                     </Stack>
+
 
                 </BackgroundImage>
             </Paper>
