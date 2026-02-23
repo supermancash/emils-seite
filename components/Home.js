@@ -68,7 +68,7 @@ const HomePageComponent = (props) => {
                     <Stack >
                         <Title order={1}>Welcome!</Title>
                         <Text>And thank you for the visit :)
-                            <Text>I'm Emil, a software engineer from Berlin, currently living in Martinique.</Text>
+                            <Text>I&apos;m Emil, a software engineer from Berlin, currently living in Martinique.</Text>
 
                         </Text>
 

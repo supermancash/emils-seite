@@ -16,7 +16,7 @@ const papers = [
         tag: "Academic Paper",
     },
     {
-        title: "Investigation of NoSQL Databases for Multimedia Applications",
+        title: "Research Paper on the use of NoSQL Databases for Multimedia Applications",
         description: "Analysis of NoSQL database systems for the use case of multimedia applications",
         file: "NoSQL_Databases.pdf",
         tag: "Academic Paper",
