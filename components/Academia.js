@@ -72,7 +72,7 @@ export default function AcademiaCard() {
                                                     </div>
                                                 </Group>
                                                 <Group spacing="xs" noWrap>
-                                                    <Badge variant="light" size="sm">{paper.tag}</Badge>
+                                                    <Badge variant="light" size="sm" style={{ textTransform: "none" }}>{paper.tag}</Badge>
                                                     <IconExternalLink size={16} stroke={1.5} />
                                                 </Group>
                                             </Group>
