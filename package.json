@@ -22,5 +22,8 @@
   "devDependencies": {
     "eslint": "7",
     "eslint-config-next": "12.0.4"
+  },
+  "engines": {
+    "node": ">=24.0.0 <25.0.0"
   }
 }
