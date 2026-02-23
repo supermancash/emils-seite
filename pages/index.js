@@ -9,11 +9,11 @@ export default function Home() {
       <Head>
         <title>Emil Triest</title>
         <meta name="description" content="Emil's Homepage" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/emil_portrait.jpeg" />
       </Head>
 
       <main>
-        <HomePageComponent/>
+        <HomePageComponent />
       </main>
     </div>
   )
