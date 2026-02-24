@@ -4,6 +4,7 @@ import HeaderComponent from "../components/Header";
 import FooterComponent from "../components/Footer";
 import "animate.css";
 import {useViewportSize} from "@mantine/hooks";
+import { Analytics } from '@vercel/analytics/react';
 
 function MyApp({Component, pageProps}) {
     const { height, width } = useViewportSize();
@@ -26,6 +27,7 @@ function MyApp({Component, pageProps}) {
                 <Component {...pageProps} isMobile={isMobile} userAgentHeight={height} userAgentWidth={width}/>
                 </AppShell>
             </MantineProvider>
+            <Analytics />
         </>
     );
 }
