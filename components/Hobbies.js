@@ -36,7 +36,7 @@ const hobbies = [
     },
     {
         name: "Surfing",
-        description: "Living in Martinique makes it easy. Nothing beats the feeling of catching a clean wave in the Caribbean.",
+        description: "I love surfing! Living in Berlin doesn't make this my most frequent hobby, but I still enjoy it when I can.",
         icon: IconWaveSine,
         color: "cyan",
         gradient: ["#15aabf", "#0c8599"],
@@ -157,8 +157,8 @@ export default function HobbiesCard() {
                             direction === "next"
                                 ? "hobby-slide-right"
                                 : direction === "prev"
-                                ? "hobby-slide-left"
-                                : "hobby-slide-right"
+                                    ? "hobby-slide-left"
+                                    : "hobby-slide-right"
                         }
                         style={{
                             flex: 1,
