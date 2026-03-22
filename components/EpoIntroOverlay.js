@@ -36,7 +36,7 @@ const STAGGER_MS = 70 * SLOW;
 const wordDelayMs = (i) =>
     i * STAGGER_MS + (i >= SECOND_SENTENCE_START ? PAUSE_AFTER_FIRST_MS : 0);
 const WORD_FADE_MS = 420 * SLOW;
-const HOLD_AFTER_MS = 600 * SLOW;
+const HOLD_AFTER_MS = 150 * SLOW;
 const OVERLAY_FADE_OUT_MS = 450 * SLOW;
 
 export const EpoIntroOverlay = forwardRef(function EpoIntroOverlay(
