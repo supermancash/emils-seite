@@ -20,7 +20,7 @@ const SKILLSETS = [
         name: "Software Architecture",
         color: "cyan",
         icon: IconBuildingArch,
-        skills: ["Technical Leadership", "Concept Documentation", "Microservices Architecture", "Event-Driven Architecture", "Service-Oriented Architecture", "Technical Debt Management", "Security & Compliance Management", "API Design", "REST",],
+        skills: ["Technical Leadership", "Concept Documentation", "Microservices Architecture", "Service-Oriented Architecture", "Technical Debt Management", "Security & Compliance Management", "API Design", "REST", "Progressive Delivery", "Performance Engineering"],
     },
     {
         name: "Frontend Development",
@@ -28,7 +28,7 @@ const SKILLSETS = [
         icon: IconCode,
         skills: ["React", "Next.js", "Vue.js", "Nuxt.js", "Svelte", "SvelteKit", "Angular", "AngularJS", "Mantine", "Tailwind CSS", "Bootstrap",
             "React Native", "npm", "yarn", "Playwright",
-            "HTML", "CSS", "JavaScript", "TypeScript"],
+            "HTML", "CSS", "JavaScript", "TypeScript", "Webpack", "Vite / ViteJS", "Redux", "Design Uniformity", "Web Vitals", "Cross-browser / Cross-device Compatibility", "Global Styling"],
     },
     {
         name: "Backend Development",
@@ -46,7 +46,7 @@ const SKILLSETS = [
         name: "DevOps",
         color: "blue",
         icon: IconBrandDocker,
-        skills: ["Docker", "Kubernetes", "CI/CD Automation", "Git", "GitHub Actions", "Jenkins", "AWS", "Azure", "Vercel"],
+        skills: ["Docker", "Kubernetes", "CI/CD Automation", "Git", "GitHub Actions", "Jenkins", "AWS", "Azure", "Vercel", "OpenTelemetry (OTel)", "OIDC", "CSP", "Service Mesh", "Datadog"],
     },
     {
         name: "Agile Methodologies",
