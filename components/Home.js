@@ -1,20 +1,15 @@
 import {
     Avatar,
-    Center,
-    Card,
+    Badge,
+    Button,
     Group,
     Stack,
-    Title,
-    BackgroundImage,
-    Container,
     Text,
-    Grid,
-
-    Badge,
-    Paper
+    Title,
 } from "@mantine/core";
 import { useHover, useViewportSize } from "@mantine/hooks";
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { EpoIntroOverlay } from "./EpoIntroOverlay";
 import { IconBrandLinkedin, IconMail, IconPhone, IconTimeline } from "@tabler/icons";
 import ContactCard from "./Contact";
 import Experience from "./Experience";
@@ -38,6 +33,9 @@ const shimmerKeyframes = `
 const HomePageComponent = (props) => {
     const { height, width } = useViewportSize();
     const { hovered, ref } = useHover();
+    const introRef = useRef(null);
+    const [introPhase, setIntroPhase] = useState("pending");
+    const onIntroPhase = useCallback((p) => setIntroPhase(p), []);
 
     useEffect(() => {
         const style = document.createElement("style");
@@ -60,7 +58,7 @@ const HomePageComponent = (props) => {
                 <Group align="flex-start" pb="xl">
 
                     <Avatar
-                        src="emil_portrait.jpeg"
+                        src="emil_cv_1x1.jpg"
                         radius={0.15 * height}
                         size={0.3 * height}
                         style={{ zIndex: "3" }}
@@ -73,11 +71,22 @@ const HomePageComponent = (props) => {
                         </Text>
 
                         <Group>
-                            <Badge variant="outline" color="dark" style={{ textTransform: "none" }} leftSectiontSection={<IconTimeline />}>Age: 23</Badge>
+                            <Badge variant="outline" color="dark" style={{ textTransform: "none" }}>Age: 23</Badge>
                             <Badge variant="outline" color="dark" style={{ textTransform: "none" }}>Languages: German, English, French & Italian</Badge>
                             <Badge variant="outline" color="dark" style={{ textTransform: "none" }}>Education: B.Sc. Economics & Computer Sciences @ FOM Berlin</Badge>
                             <Badge variant="outline" color="dark" style={{ textTransform: "none" }}>Experience: 5 years</Badge>
                         </Group>
+
+                        <Button
+                            variant="light"
+                            size="xs"
+                            color="gray"
+                            onClick={() => introRef.current?.rerun()}
+                            sx={{ alignSelf: "flex-start" }}
+                        >
+                            Rerun animation
+                        </Button>
+
                     </Stack>
                 </Group>
 
@@ -89,8 +98,12 @@ const HomePageComponent = (props) => {
 
                 <ContactCard />
 
-
             </Stack>
+            <EpoIntroOverlay
+                ref={introRef}
+                externalIdleButton
+                onPhaseChange={onIntroPhase}
+            />
         </>
     );
 }
