@@ -6,6 +6,7 @@ import {
     Stack,
     Text,
     Title,
+    SimpleGrid
 } from "@mantine/core";
 import { useHover, useViewportSize } from "@mantine/hooks";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -70,12 +71,6 @@ const HomePageComponent = (props) => {
 
                         </Text>
 
-                        <Group>
-                            <Badge variant="outline" color="dark" style={{ textTransform: "none" }}>Age: 23</Badge>
-                            <Badge variant="outline" color="dark" style={{ textTransform: "none" }}>Languages: German, English, French & Italian</Badge>
-                            <Badge variant="outline" color="dark" style={{ textTransform: "none" }}>Education: B.Sc. Economics & Computer Sciences @ FOM Berlin</Badge>
-                            <Badge variant="outline" color="dark" style={{ textTransform: "none" }}>Experience: 5 years</Badge>
-                        </Group>
 
                         <Button
                             variant="light"
